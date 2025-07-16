@@ -78,10 +78,17 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1em;
+    margin-top: 10px;
+    text-decoration: none;
+    display: inline-block;
 }
 
 button:hover {
     background-color: #ffb300;
+}
+
+a button {
+    margin-top: 20px;
 }
 
 .slides, .gallery {
@@ -107,6 +114,32 @@ ul {
     margin: 0 auto;
 }
 
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.form-container label {
+    text-align: left;
+    color: #e0f7fa;
+}
+
+.form-container input, .form-container select {
+    padding: 8px;
+    border: 1px solid #4fc3f7;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #e0f7fa;
+    width: 100%;
+}
+
+.form-container button {
+    margin-top: 10px;
+}
+
 @media (max-width: 600px) {
     .nav-links {
         flex-direction: column;
@@ -128,5 +161,8 @@ ul {
     }
     header, .content {
         margin-top: 80px;
+    }
+    .form-container {
+        max-width: 90%;
     }
 }
