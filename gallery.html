@@ -90,15 +90,15 @@
         let slideInterval;
 
         function plusSlides(n) {
-            clearInterval(slideInterval); // Stop auto-slide on manual navigation
+            clearInterval(slideInterval);
             showSlides(slideIndex += n);
-            startAutoSlide(); // Restart auto-slide
+            startAutoSlide();
         }
 
         function currentSlide(n) {
-            clearInterval(slideInterval); // Stop auto-slide on dot click
+            clearInterval(slideInterval);
             showSlides(slideIndex = n);
-            startAutoSlide(); // Restart auto-slide
+            startAutoSlide();
         }
 
         function showSlides(n) {
@@ -120,10 +120,9 @@
         function startAutoSlide() {
             slideInterval = setInterval(() => {
                 plusSlides(1);
-            }, 5000); // Change slide every 5 seconds
+            }, 5000);
         }
 
-        // Initialize slideshow
         showSlides(slideIndex);
         startAutoSlide();
     </script>
