@@ -99,12 +99,18 @@ a button {
     flex-wrap: wrap;
 }
 
-.slide, .gallery-item {
+.gallery-item {
     background: rgba(255, 255, 255, 0.1);
     padding: 15px;
     border-radius: 5px;
     width: 200px;
     box-shadow: 0 0 10px rgba(79, 195, 247, 0.5);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
 }
 
 ul {
@@ -161,6 +167,9 @@ ul {
     }
     header, .content {
         margin-top: 80px;
+    }
+    .gallery-item {
+        width: 100%;
     }
     .form-container {
         max-width: 90%;
