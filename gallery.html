@@ -75,8 +75,8 @@
                     <img src="images/conceptacademy3.jpg" alt="Cosmic Learning Environment">
                 </div>
             </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
         </div>
         <br>
         <div style="text-align:center">
@@ -87,14 +87,18 @@
     </section>
     <script>
         let slideIndex = 1;
-        showSlides(slideIndex);
+        let slideInterval;
 
         function plusSlides(n) {
+            clearInterval(slideInterval); // Stop auto-slide on manual navigation
             showSlides(slideIndex += n);
+            startAutoSlide(); // Restart auto-slide
         }
 
         function currentSlide(n) {
+            clearInterval(slideInterval); // Stop auto-slide on dot click
             showSlides(slideIndex = n);
+            startAutoSlide(); // Restart auto-slide
         }
 
         function showSlides(n) {
@@ -112,6 +116,16 @@
             slides[slideIndex-1].style.display = "block";
             dots[slideIndex-1].className += " active";
         }
+
+        function startAutoSlide() {
+            slideInterval = setInterval(() => {
+                plusSlides(1);
+            }, 5000); // Change slide every 5 seconds
+        }
+
+        // Initialize slideshow
+        showSlides(slideIndex);
+        startAutoSlide();
     </script>
 </body>
 </html>
