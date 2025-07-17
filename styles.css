@@ -92,7 +92,7 @@ a button {
 }
 
 .slides, .gallery {
-    display: none; /* Hide the old gallery layout */
+    display: none;
 }
 
 .slideshow-container {
@@ -127,8 +127,8 @@ a button {
     width: 100%;
     height: auto;
     border-radius: 5px;
-    max-height: 400px; /* Limit maximum height */
-    object-fit: contain; /* Ensure the image fits without distortion */
+    max-height: 400px;
+    object-fit: contain;
 }
 
 .prev, .next {
@@ -194,9 +194,20 @@ ul {
     padding: 8px;
     border: 1px solid #4fc3f7;
     border-radius: 5px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.3); /* Darker background for better contrast */
     color: #e0f7fa;
     width: 100%;
+}
+
+.form-container select option {
+    background: #1a0033; /* Match body background */
+    color: #e0f7fa; /* Ensure text is visible */
+}
+
+.form-container select:focus {
+    outline: none;
+    border-color: #4fc3f7;
+    box-shadow: 0 0 5px #4fc3f7;
 }
 
 .form-container button {
