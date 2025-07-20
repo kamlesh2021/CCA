@@ -226,6 +226,7 @@ ul {
     color: #fff;
     box-shadow: 0 4px 24px 0 rgba(0,0,0,0.2);
     transition: transform 0.2s, box-shadow 0.2s;
+    border: 2px solid #4fc3f7;
 }
 .slide.maths {
     background: linear-gradient(135deg, #4fc3f7, #1976d2);
