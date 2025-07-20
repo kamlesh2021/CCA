@@ -215,6 +215,32 @@ ul {
     margin-top: 10px;
 }
 
+.slide {
+    display: inline-block;
+    min-width: 250px;
+    margin: 20px 20px 0 20px;
+    padding: 20px 40px;
+    border-radius: 12px;
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.slide.maths {
+    background: linear-gradient(135deg, #4fc3f7, #1976d2);
+}
+.slide.science {
+    background: linear-gradient(135deg, #81c784, #388e3c);
+}
+.slide.english {
+    background: linear-gradient(135deg, #ffb74d, #f57c00);
+}
+.slide:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.3);
+}
+
 @media (max-width: 600px) {
     .nav-links {
         flex-direction: column;
