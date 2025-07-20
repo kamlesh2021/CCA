@@ -49,11 +49,11 @@ nav {
 
 header, .content {
     margin-top: 60px;
-    padding: 20px;
+    padding: clamp(16px, 4vw, 40px);
     background: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
     border: 2px solid #4fc3f7;
-    max-width: 90%; /* More flexible width */
+    max-width: clamp(320px, 90vw, 900px);
     margin-left: auto;
     margin-right: auto;
 }
@@ -115,12 +115,14 @@ a button {
 
 .gallery-item {
     background: rgba(255, 255, 255, 0.1);
-    padding: 15px;
+    padding: clamp(10px, 3vw, 24px);
     border-radius: 5px;
     width: 100%;
-    height: clamp(200px, 50vw, 400px); /* Scale height based on viewport */
+    height: clamp(150px, 40vw, 400px);
     box-shadow: 0 0 10px rgba(79, 195, 247, 0.5);
     overflow: hidden;
+    max-width: clamp(220px, 90vw, 600px);
+    margin: 2vw auto;
 }
 
 .gallery-item img {
@@ -215,31 +217,64 @@ ul {
     margin-top: 10px;
 }
 
+/* Responsive slide cards */
 .slide {
     display: inline-block;
-    min-width: 250px;
-    margin: 20px 20px 0 20px;
-    padding: 20px 40px;
+    min-width: clamp(180px, 30vw, 320px);
+    margin: 2vw 2vw 0 2vw;
+    padding: clamp(12px, 3vw, 32px) clamp(16px, 6vw, 48px);
     border-radius: 12px;
-    font-size: 2em;
+    font-size: clamp(1.2em, 3vw, 2em);
     font-weight: bold;
     color: #fff;
     box-shadow: 0 4px 24px 0 rgba(0,0,0,0.2);
     transition: transform 0.2s, box-shadow 0.2s;
     border: 2px solid #4fc3f7;
 }
+
 .slide.maths {
-    background: linear-gradient(135deg, #4fc3f7, #1976d2);
+    background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+    box-shadow: 0 0 24px 4px rgba(0,198,255,0.3), 0 4px 24px 0 rgba(0,0,0,0.2);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 .slide.science {
-    background: linear-gradient(135deg, #81c784, #388e3c);
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    box-shadow: 0 0 24px 4px rgba(67,233,123,0.3), 0 4px 24px 0 rgba(0,0,0,0.2);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 .slide.english {
-    background: linear-gradient(135deg, #ffb74d, #f57c00);
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    box-shadow: 0 0 24px 4px rgba(250,112,154,0.3), 0 4px 24px 0 rgba(0,0,0,0.2);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 .slide:hover {
-    transform: translateY(-8px) scale(1.04);
-    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.3);
+    filter: brightness(1.1) saturate(1.2);
+    box-shadow: 0 0 40px 8px rgba(79,195,247,0.4), 0 8px 32px 0 rgba(0,0,0,0.3);
+}
+
+@media (max-width: 700px) {
+    .slides {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .slide {
+        display: block;
+        width: 90vw;
+        min-width: unset;
+        margin: 3vw 0;
+        font-size: clamp(1em, 5vw, 1.5em);
+        padding: clamp(10px, 5vw, 24px);
+    }
+    header, .content {
+        max-width: 98vw;
+        padding: clamp(10px, 6vw, 24px);
+    }
+    .gallery-item {
+        max-width: 98vw;
+        height: clamp(100px, 50vw, 250px);
+        padding: clamp(8px, 4vw, 16px);
+    }
 }
 
 @media (max-width: 600px) {
