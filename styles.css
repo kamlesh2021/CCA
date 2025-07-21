@@ -220,11 +220,11 @@ ul {
 /* Responsive slide cards */
 .slide {
     display: inline-block;
-    min-width: clamp(180px, 30vw, 320px);
+    min-width: clamp(120px, 18vw, 200px);
     margin: 2vw 2vw 0 2vw;
-    padding: clamp(12px, 3vw, 32px) clamp(16px, 6vw, 48px);
+    padding: clamp(8px, 2vw, 18px) clamp(12px, 4vw, 24px);
     border-radius: 12px;
-    font-size: clamp(1.2em, 3vw, 2em);
+    font-size: clamp(1em, 2vw, 1.2em);
     font-weight: bold;
     color: #fff;
     box-shadow: 0 4px 24px 0 rgba(0,0,0,0.2);
@@ -263,8 +263,8 @@ ul {
         width: 90vw;
         min-width: unset;
         margin: 3vw 0;
-        font-size: clamp(1em, 5vw, 1.5em);
-        padding: clamp(10px, 5vw, 24px);
+        font-size: clamp(0.9em, 4vw, 1.1em);
+        padding: clamp(6px, 3vw, 14px);
     }
     header, .content {
         max-width: 98vw;
