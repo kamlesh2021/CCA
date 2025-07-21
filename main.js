@@ -35,4 +35,15 @@ if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
     }
 }
 return gk_fileData[filename] || "";
-} 
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    var hamburger = document.querySelector('.hamburger');
+    var nav = document.querySelector('nav');
+    if (hamburger && nav) {
+        hamburger.addEventListener('click', function() {
+            var isOpen = nav.classList.toggle('menu-open');
+            hamburger.setAttribute('aria-expanded', isOpen);
+        });
+    }
+}); 
